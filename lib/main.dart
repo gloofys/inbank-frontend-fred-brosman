@@ -39,12 +39,11 @@ class InBankForm extends StatelessWidget {
               .copyWith(secondary: AppColors.secondaryColor)
               .copyWith(error: AppColors.errorColor),
           textSelectionTheme: TextSelectionThemeData(
-            selectionColor: AppColors.textColor.withOpacity(0.3),
+            selectionColor: AppColors.textColor.withValues(alpha: 0.3),
           )),
       home: Scaffold(
         // Center the body and set its height.
         body: Center(
-            child: Expanded(
           child: SizedBox(
             height: max(minHeight, bodyHeight),
             child: Column(
@@ -63,7 +62,6 @@ class InBankForm extends StatelessWidget {
                     visible: showText, child: const SizedBox(height: 60)),
                 const LoanForm(),
               ],
-            ),
           ),
         )),
       ),
